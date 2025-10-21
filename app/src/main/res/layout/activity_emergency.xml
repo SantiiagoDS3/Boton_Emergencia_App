@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".EmergencyActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Emergencia"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Necesitas ayuda?\nPresiona el botón según tu emergencia"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/enfermeriaButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/subtitle"
+        android:text="Enfermería"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enfermeriaButton"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/contactoButton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Contacto Cercano"
+                android:textSize="18sp" />
+
+            <!-- Larger touch target (48dp) with ripple to meet accessibility guidelines -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:padding="0dp">
+
+                <ImageButton
+                    android:id="@+id/contactoEditButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Editar contactos"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:scaleType="centerInside"
+                    android:padding="8dp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:importantForAccessibility="yes" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/tutorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tutor"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Al presionar cualquier botón se enviará una alerta de emergencia"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:background="#FFF3CD"
+        android:textColor="#856404"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

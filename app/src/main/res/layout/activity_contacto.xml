@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical|center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:labelFor="@id/contactNumberInput"
+        android:gravity="center"
+        android:text="Ingresa el número de contacto cercano"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/contactNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="phone"
+        android:hint="Ej: 521234567890"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/contactLabelInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="Etiqueta (ej: Papá, Tutor)"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/saveContactButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:contentDescription="Guardar número de contacto"
+        android:minHeight="48dp"
+        android:text="Guardar" />
+
+</LinearLayout>
